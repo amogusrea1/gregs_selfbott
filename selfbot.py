@@ -81,13 +81,32 @@ async def on_ready():
        print(
             f"""{Fore.GREEN}
 
-░██████╗░██████╗░███████╗░██████╗░██╗░██████╗  ░██████╗███████╗██╗░░░░░███████╗██████╗░░█████╗░████████╗░░░
-██╔════╝░██╔══██╗██╔════╝██╔════╝░╚█║██╔════╝  ██╔════╝██╔════╝██║░░░░░██╔════╝██╔══██╗██╔══██╗╚══██╔══╝░░░
-██║░░██╗░██████╔╝█████╗░░██║░░██╗░░╚╝╚█████╗░  ╚█████╗░█████╗░░██║░░░░░█████╗░░██████╦╝██║░░██║░░░██║░░░░░░ (type !cmds)
-██║░░╚██╗██╔══██╗██╔══╝░░██║░░╚██╗░░░░╚═══██╗  ░╚═══██╗██╔══╝░░██║░░░░░██╔══╝░░██╔══██╗██║░░██║░░░██║░░░░░░
-╚██████╔╝██║░░██║███████╗╚██████╔╝░░░██████╔╝  ██████╔╝███████╗███████╗██║░░░░░██████╦╝╚█████╔╝░░░██║░░░██╗
-░╚═════╝░╚═╝░░╚═╝╚══════╝░╚═════╝░░░░╚═════╝░  ╚═════╝░╚══════╝╚══════╝╚═╝░░░░░╚═════╝░░╚════╝░░░░╚═╝░░░╚═╝ 
-                                greg's selfbot   
+  ▄████  ██▀███  ▓█████   ▄████   ██████
+ ██▒ ▀█▒▓██ ▒ ██▒▓█   ▀  ██▒ ▀█▒▒██    ▒
+▒██░▄▄▄░▓██ ░▄█ ▒▒███   ▒██░▄▄▄░░ ▓██▄
+░▓█  ██▓▒██▀▀█▄  ▒▓█  ▄ ░▓█  ██▓  ▒   ██▒
+░▒▓███▀▒░██▓ ▒██▒░▒████▒░▒▓███▀▒▒██████▒▒
+ ░▒   ▒ ░ ▒▓ ░▒▓░░░ ▒░ ░ ░▒   ▒ ▒ ▒▓▒ ▒ ░
+  ░   ░   ░▒ ░ ▒░ ░ ░  ░  ░   ░ ░ ░▒  ░ ░
+░ ░   ░   ░░   ░    ░   ░ ░   ░ ░  ░  ░
+      ░    ░        ░  ░      ░       ░
+
+  ██████ ▓█████  ██▓      █████▒▄▄▄▄    ▒█████  ▄▄▄█████▓
+▒██    ▒ ▓█   ▀ ▓██▒    ▓██   ▒▓█████▄ ▒██▒  ██▒▓  ██▒ ▓▒
+░ ▓██▄   ▒███   ▒██░    ▒████ ░▒██▒ ▄██▒██░  ██▒▒ ▓██░ ▒░
+  ▒   ██▒▒▓█  ▄ ▒██░    ░▓█▒  ░▒██░█▀  ▒██   ██░░ ▓██▓ ░
+▒██████▒▒░▒████▒░██████▒░▒█░   ░▓█  ▀█▓░ ████▓▒░  ▒██▒ ░
+▒ ▒▓▒ ▒ ░░░ ▒░ ░░ ▒░▓  ░ ▒ ░   ░▒▓███▀▒░ ▒░▒░▒░   ▒ ░░
+░ ░▒  ░ ░ ░ ░  ░░ ░ ▒  ░ ░     ▒░▒   ░   ░ ▒ ▒░     ░
+░  ░  ░     ░     ░ ░    ░ ░    ░    ░ ░ ░ ░ ▒    ░
+      ░     ░  ░    ░  ░        ░          ░ ░
+                                     ░
+For commands type:
+ ____ ____ ____ ____ ____
+||! |||c |||m |||d |||s ||
+||__|||__|||__|||__|||__||
+|/__\|/__\|/__\|/__\|/__\|
+
 if prefix ! doesnt work the open config.txt      
 {Fore.GREEN}logged in as:{Fore.RESET}{client.user.name}#{client.user.discriminator}                          
 {Fore.LIGHTMAGENTA_EX}premium type(nitro):{Fore.RESET}{client.user.premium_type}
@@ -232,7 +251,7 @@ async def nuke(ctx):
     await ctx.channel.delete()
     await new_chan.edit(position = channel_position) 
     randcolor = random.randint(0x000000, 0xFFFFFF)
-    embed=discord.Embed(title="Scalic Selfbot - Channel Nuked", description=f"<#{new_chan.id}> - {new_chan.name} has been nuked", color=randcolor)
+    embed=discord.Embed(title="greg's Selfbot - Channel YEETed", description=f"<#{new_chan.id}> - {new_chan.name} has been nuked", color=randcolor)
     embed.set_thumbnail(url="https://media.giphy.com/media/dKfTyqLt1jkqIfiMXj/giphy.gif")
     embed.set_footer(text="))))")
     await new_chan.send(embed=embed)
@@ -281,9 +300,9 @@ async def hastebin(ctx, *,paste=f"Format is {prefix.strip()}hastebin [text]"):
     endoflink = j['key']
 
     randcolor = random.randint(0x000000, 0xFFFFFF)
-    embed=discord.Embed(title="greg's Selfbot - Hastebin", description=f"Here's your paste!\n{textlink}{endoflink}", color=randcolor)
+    embed=discord.Embed(title="greg's Selfbot - Hastebin", description=f"Here ya go!\n{textlink}{endoflink}", color=randcolor)
     embed.set_thumbnail(url="https://media.giphy.com/media/dKfTyqLt1jkqIfiMXj/giphy.gif")
-    embed.set_footer(text="https://github.com/scalic/scalic-selfbot")
+    embed.set_footer(text="https://github.com/spaghettilord945/gregs_selfbott")
     await ctx.message.edit(content="",embed=embed)
 
 def nooooourchannelsgotnukedomg(idofguild,nameofchan):
@@ -412,20 +431,10 @@ async def nitrosnipe(ctx,snipestatus=None):
             nitrosniping = "off"
 
     randcolor = random.randint(0x000000, 0xFFFFFF)
-    embed=discord.Embed(title="Scalic Selfbot - Nitro Sniper", description=f"Nitro sniper is now : `{nitrosniping}`", color=randcolor)
+    embed=discord.Embed(title="Greg's Selfbot - Nitro Sniper", description=f"Nitro sniper is now : `{nitrosniping}`", color=randcolor)
     embed.set_thumbnail(url="https://media.giphy.com/media/YpGPs0rAJQC1lngD0R/giphy.gif")
-    embed.set_footer(text="https://github.com/scalic/scalic-selfbot")
+    embed.set_footer(text="https://github.com/spaghettilord945/gregs_selfbott")
     await ctx.message.edit(content="",embed=embed)
-
-@client.command(aliases=['fuck'])
-async def hentai(ctx, user: discord.User = None):
-        await ctx.message.delete()
-        api = requests.get("https://nekos.life/api/v2/img/Random_hentai_gif")
-        json = api.json()
-        msg = discord.Embed(description=user.mention + " This could be you and me ")
-        msg.set_image(url=json['url'])
-        
-        await ctx.send(embed=msg)
 
 
 client.run(token.strip(), bot=False)
